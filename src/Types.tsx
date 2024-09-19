@@ -1,9 +1,12 @@
 export type Crypto = {
-    id: string;
-    name: string;
-    price_usd: string;
-    symbol: string;
-    volume24: number;
-    volume24a: number;
+  ath: number;
+  atl: number;
+  current_price: number;
+  id: string;
+  name: string;
+  symbol: string;
+  high_24h: number;
+  low_24h: number;
+
   };
   
