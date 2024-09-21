@@ -24,7 +24,12 @@ export default function CryptoSummary({ crypto, updateOwned }: AppProps): JSX.El
           updateOwned(crypto, parseFloat(e.target.value));
         }}
       ></input>
-      <p>${(crypto.current_price * amount).toLocaleString(undefined,{minimumFractionDigits: 2,maximumFractionDigits: 2})}</p>
+      <p>
+       {isNaN(amount) ? '$0.00' : '$' +
+       (crypto.current_price * amount).toLocaleString(undefined,{
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2})}
+        </p>
     </div>
   );
 }
